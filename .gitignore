@@ -129,3 +129,7 @@ pids
 # Ignore test coverage files
 coverage/
 .nyc_output/
+
+# Ignorer les dossiers v1-download et v1-downloads
+v1-download/
+v1-downloads/

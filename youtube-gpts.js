@@ -92,6 +92,20 @@ function saveEntireTranscript(transcript, videoTitle, outputDir) {
   fs.writeFileSync(filePath, entireTranscriptText, "utf8");
 }
 
+// Fonction pour créer un fichier info.txt avec la table des matières
+function createInfoFile(videoUrl, chapters, outputDir) {
+  let infoContent = `URL de la vidéo: ${videoUrl}\n\n## Table des matières\n`;
+  if (chapters.length > 0) {
+    chapters.forEach((chapter, index) => {
+      infoContent += `### Chapitre ${index + 1}: ${chapter.title}\n`;
+    });
+  } else {
+    infoContent += "### Pas de chapitres disponibles\n";
+  }
+  const filePath = path.join(outputDir, "info.txt");
+  fs.writeFileSync(filePath, infoContent, "utf8");
+}
+
 // Exécution du script
 (async () => {
   try {
@@ -104,8 +118,9 @@ function saveEntireTranscript(transcript, videoTitle, outputDir) {
     const chaptersText = splitTranscriptByChapters(transcript, chapters);
     saveChaptersToFiles(chaptersText, outputDir);
     saveEntireTranscript(transcript, videoTitle, outputDir); // Sauvegarder la transcription entière
+    createInfoFile(videoUrl, chapters, outputDir); // Créer le fichier info.txt
     console.log(
-      "Transcriptions par chapitres et la transcription entière sauvegardées avec succès dans le répertoire:",
+      "Transcriptions par chapitres, la transcription entière, et le fichier info.txt sauvegardés avec succès dans le répertoire:",
       outputDir
     );
   } catch (error) {
