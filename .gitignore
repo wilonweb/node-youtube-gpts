@@ -1,0 +1,131 @@
+# Node.js
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+logs
+*.log
+logs/
+
+# Dependency directories
+node_modules/
+jspm_packages/
+
+# Optional npm cache directory
+.npm
+.eslintcache
+
+# Optional REPL history
+.node_repl_history
+
+# Coverage directory used by tools like istanbul
+coverage/
+*.lcov
+
+# nyc test coverage
+.nyc_output/
+
+# Grunt intermediate storage (http://gruntjs.com/creating-plugins#storing-task-files)
+.grunt/
+
+# Bower dependency directory (https://bower.io/)
+bower_components/
+
+# Environment variables
+.env
+.env.test
+.env.production
+.env.local
+.env.*.local
+
+# Parcel-bundler cache (https://parceljs.org/)
+.cache
+.parcel-cache
+
+# Next.js build output
+.next
+out
+
+# Nuxt.js build / generate output
+.nuxt
+dist
+
+# Gatsby files
+.cache/
+public
+
+# Vuepress build output
+.vuepress/dist
+
+# Serverless directories
+.serverless/
+
+# FuseBox cache
+.fusebox/
+
+# DynamoDB Local files
+.dynamodb/
+
+# TernJS port file
+.tern-port
+
+# VS Code directory and files
+.vscode/
+.history
+
+# JetBrains IDEs
+.idea/
+*.iml
+
+# Sails.js specific folders
+.tmp/
+
+# Optional Stylelint cache
+.stylelintcache
+
+# MacOS specific files
+.DS_Store
+
+# Windows specific files
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Coverage reports
+coverage/
+
+# Error reports
+error-reports/
+
+# Output of 'npm pack'
+*.tgz
+
+# Yarn Integrity file
+.yarn-integrity
+
+# dotenv environment variables file
+.env
+
+# pm2 log files
+pids
+*.pid
+*.log
+
+# npm-cache
+.npm
+
+# Optional eslint cache
+.eslintcache
+
+# Output of 'npm pack'
+*.tgz
+
+# Ignore test coverage files
+coverage/
+.nyc_output/
